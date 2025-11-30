@@ -29,9 +29,9 @@ INSERT INTO EndUser (First_Name, Last_Name, Email, Phone, Company_Name)
 VALUES ('James', 'Taylor', 'jtaylor@client.com', '555-2222', 'FinServe');
 
 -- 5. Tickets Table
-INSERT INTO Tickets (Customer_ID, Category_ID, Department_ID, Title, Description, Priority)
+INSERT INTO Tickets (EndUser_ID, Category_ID, Department_ID, Title, Description, Priority)
 VALUES (1, 1, 3, 'Database Timeout', 'Customer reports frequent DB timeouts', 'HIGH');
-INSERT INTO Tickets (Customer_ID, Category_ID, Department_ID, Title, Description, Priority)
+INSERT INTO Tickets (EndUser_ID, Category_ID, Department_ID, Title, Description, Priority)
 VALUES (2, 2, 2, 'UI Alignment Issue', 'Frontend buttons misaligned on dashboard', 'MEDIUM');
 
 -- 6. EndUser_Tickets Table (Optional Many-to-Many)
@@ -45,4 +45,3 @@ INSERT INTO Ticket_Comments (Ticket_ID, Comment_Text, Commented_By)
 VALUES (1, 'Investigating database timeout issue', 'David Lee');
 INSERT INTO Ticket_Comments (Ticket_ID, Comment_Text, Commented_By)
 VALUES (2, 'UI bug replicated, working on fix', 'Sophia Martinez');
-
