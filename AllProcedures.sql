@@ -79,7 +79,7 @@ BEGIN
     WHERE Ticket_ID = v_ticket_id;
 
     -- Insert into Programmer-Ticket Mapping
-    INSERT INTO Customer_Tickets (EndUser_ID, Ticket_ID)
+    INSERT INTO EndUserTickets (EndUser_ID, Ticket_ID)
     SELECT EndUser_ID, v_ticket_id
     FROM Tickets
     WHERE Ticket_ID = v_ticket_id;
@@ -92,7 +92,7 @@ END Resolve_Ticket;
 -- Customer raises a ticket
 BEGIN
     Raise_A_Ticket(
-        p_customer_id   => 1,
+        p_enduser_id   => 1,
         p_title         => 'Database Timeout',
         p_description   => 'Frequent timeouts during queries',
         p_priority      => 'HIGH',
